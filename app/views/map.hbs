@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Map | BeerHopper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper black">
+        <div class="container">
+          <a id = "profile" href="/users/:username" title="Profile" class="brand-logo">BEERHOPPER</a>
+          <a href="#" data-target="mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="/events" title="Events">
+                <i class="material-icons left">event</i>Events</a>
+            </li>
+            <li>
+              <a href="/map" title="Map">
+                <i class="material-icons left">map</i>Map</a>
+            </li>
+            <li>
+              <a href="/signin" title="Sign Out">
+                <i class="material-icons left">exit_to_app</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile">
+      <li>
+        <a id = "profile" href="/users/:username" title="Profile">
+          <i class="material-icons left">account_circle</i>Profile</a>
+      </li>
+      <li>
+        <a href="/events" title="Events">
+          <i class="material-icons left">event</i>Events</a>
+      </li>
+      <li>
+        <a href="/map" title="Map">
+          <i class="material-icons left">map</i>Map</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="/signin">
+          <i class="material-icons">exit_to_app</i>Sign Out</a>
+      </li>
+    </ul>
+  </header>
+
+  <main id="map-main">
+    <div id="map"></div>
+  </main>
+
+  <footer class="page-footer black" id="map-footer">
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2018 BeerHopper
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWNc9EndI5MOtEcQI_AHHw21i56UG0N3Q&callback=initMap" async
+    defer></script>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>

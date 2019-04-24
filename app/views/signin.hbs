@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign In | BeerHopper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Materialize CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    >
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+      rel="stylesheet"
+    >
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  
+  <body background="images/wooden_background2.jpg" id="mainbackground">
+
+    <main>
+      <div class="container center-align">
+        <div class="row">
+          <div class="col s12 m6">
+            <img id="logoID" class="hoverable responsive-img" src="images/mainlogo.png" alt="logo">
+          </div>
+          <div id="signin-form" class="col s12 m6">
+            <form id="signin" name="signin" method="post" action="signin">
+              <div class="card-panel hoverable">
+                <div id="signin-form2" class="row">
+                  <div class="input-field col s12">
+                    <label for="email">Email Address</label>
+                    <input class="text" name="email" type="text" />
+                  </div>
+                  <div class="input-field col s12">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" />
+                  </div>
+                  <input class="btn" type="submit" value="Sign In" />
+                  <br>
+                  <a href="/signup">What's your flavor? Register Now</a>
+                </div>
+              </div>
+            </form>
+            <!-- end of form -->
+          </div>
+          <!-- end of column -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!--end of container-->
+    </main>
+
+    <footer class="page-footer black">
+      <div class="footer-copyright">
+        <div class="container center-align">
+          © 2018 BeerHopper
+        </div>
+      </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+  </body>
+</html>

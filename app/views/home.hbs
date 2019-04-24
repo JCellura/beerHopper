@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home | BeerHopper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper black">
+        <div class="container">
+          <a id = "refresh" href="" title="Profile" class="brand-logo">BEERHOPPER</a>
+          <a href="#" data-target="mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="/events" title="Events">
+                <i class="material-icons left">event</i>Events</a>
+            </li>
+            <li>
+              <a href="/map" title="Map">
+                <i class="material-icons left">map</i>Map</a>
+            </li>
+            <li>
+              <a href="/signin" title="Sign Out">
+                <i class="material-icons left">exit_to_app</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile">
+      <li>
+        <a id = "refresh" href="" title="Profile">
+          <i class="material-icons left">account_circle</i>Profile</a>
+      </li>
+      <li>
+        <a href="/events" title="Events">
+          <i class="material-icons left">event</i>Events</a>
+      </li>
+      <li>
+        <a href="/map" title="Map">
+          <i class="material-icons left">map</i>Map</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="/signin">
+          <i class="material-icons">exit_to_app</i>Sign Out</a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+          <!-- leaderboard  -->
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content black-text">
+              <span class="card-title center" style="font-weight: bold">Leaderboard</span>
+              <table class="centered">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>User</th>
+                    <th>Pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Matt Briley</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Phuong</td>
+                    <td>860</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Joe</td>
+                    <td>60</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Matt Willson</td>
+                    <td>50</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /.col -->
+          <!-- Your profile -->
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content black-text">
+              <span id = "name" class="card-title center" style="font-weight: bold"></span>
+              <div class="row valign-wrapper">
+                <div class="col s12 m6 push-s2">
+                  <img src="../images/profilepic.png" alt="" class="circle responsive-img"
+                    style="width:100px;height:100px;">
+                </div>
+                <div class="col s12 m6">
+                  <span class="black-text">
+                    <p>Current Rank: 7</p>
+                    <p>Pts: 25</p>
+                    <p>
+                        <!-- Modal Trigger -->
+                      <a class="modal-trigger" id="icon-click" href="#modal2">
+                        <i class="material-icons left">textsms</i>Invite your friends!
+                      </a>
+                    </p>
+                  </span>
+                </div>
+              </div>
+              <div id = "flavor">
+              </div>
+              <br>
+              <div id = "profile">
+              </div>
+              <label>
+                <input type="checkbox" />
+                <span id="beer1">BlueMoon Mango Wheat</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" />
+                <span id="beer2">Yuengling Traditional Lager</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" />
+                <span id="beer3">Jack's Abby Leisure Time Lager</span>
+              </label>
+            </div>
+          </div>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+      <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Invite Friends!</h4>
+        <p>Add phone numbers to text your friends an invite to join BeerHopper.</p>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="icon_telephone" type="tel" class="validate" placeholder="+19191234567">
+                <label for="icon_telephone">Telephone</label>
+                <span id="icon-click2">
+                  <i class="material-icons suffix">add_circle</i>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn" id="tnSubmit">Submit</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2018 BeerHopper
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Custom JS -->
+  <script src="../js/home.js"></script>
+  <script src="../js/beers.js"></script>
+
+</body>
+
+</html>

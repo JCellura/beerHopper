@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form | BeerHopper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper black">
+        <div class="container">
+          <a href="/users/:username" title="Profile" class="brand-logo">BEERHOPPER</a>
+          <a href="#" data-target="mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="/events" title="Events">
+                <i class="material-icons left">event</i>Events</a>
+            </li>
+            <li>
+              <a href="/map" title="Map">
+                <i class="material-icons left">map</i>Map</a>
+            </li>
+            <li>
+              <a href="/signin" title="Sign Out">
+                <i class="material-icons left">exit_to_app</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile">
+      <li>
+        <a href="/users/:username" title="Profile">
+          <i class="material-icons left">account_circle</i>Profile</a>
+      </li>
+      <li>
+        <a href="/events" title="Events">
+          <i class="material-icons left">event</i>Events</a>
+      </li>
+      <li>
+        <a href="/map" title="Map">
+          <i class="material-icons left">map</i>Map</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="/signin">
+          <i class="material-icons">exit_to_app</i>Sign Out</a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="card white hoverable">
+            <div class="card-content black-text">
+              <!-- Q1 -->
+              <div class="row">
+                <div class="input-field col s12 m12">
+                  <p>What type of beer do you like the best?</p>
+                  <select id = "beers">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="Lager">Lager</option>
+                    <option value="Pale Ale">Pale Ale</option>
+                    <option value="Hefeweizen">Hefeweizen</option>
+                    <option value="Brown Ale">Brown Ale</option>
+                    <option value="Kolsh">Kolsch</option>
+                    <option value="Witbier">Witbier</option>
+                    <option value="Porter">Porter</option>
+                    <option value="Stout">Stout</option>
+                    <option value="Pisner">Pilsner</option>
+                    <option value="Gose">Gose</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <p>Do you like your beer light or dark?</p>
+                  <p>
+                    <label>
+                      <input name="question2" type="radio" id="light" value="light" checked/>
+                      <span>Light</span>
+                    </label>
+                    <label>
+                      <input name="question2" type="radio" id="dark" value="dark" />
+                      <span>Dark</span>
+                    </label>
+                  </p>
+                </div>
+
+                <!-- Q3 -->
+                <div class="input-field col s12 m6">
+                  <p>Do you like your beer dry or sweet?</p>
+                  <p>
+                    <label>
+                      <input name="question3" type="radio" id="dry" value="dry" checked/>
+                      <span>Dry</span>
+                    </label>
+                    <label>
+                      <input name="question3" type="radio" id="sweet" value="sweet" />
+                      <span>Sweet</span>
+                    </label>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Q4 -->
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <p>Do you like your beer fruity?</p>
+                  <p>
+                    <label>
+                      <input name="question4" type="radio" id="fruitYes" value="fruitYes" checked/>
+                      <span>Yes</span>
+                    </label>
+                    <label>
+                      <input name="question4" type="radio" id="fruitNo" value="fruitNo" />
+                      <span>No</span>
+                    </label>
+                  </p>
+                </div>
+
+                <!-- Q5 -->
+                <div class="input-field col s12 m6">
+                  <p>Do you like your beer spicy?</p>
+                  <p>
+                    <label>
+                      <input name="question5" type="radio" id="spiceYes" value="spiceYes" checked/>
+                      <span>Yes</span>
+                    </label>
+                    <label>
+                      <input name="question5" type="radio" id="spiceNo" value="spiceNo" />
+                      <span>No</span>
+                    </label>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Q6 -->
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <p>Do you like your beer hoppy?</p>
+                  <p>
+                    <label>
+                      <input name="question6" type="radio" id="hopYes" value="hopYes" checked/>
+                      <span>Yes</span>
+                    </label>
+                    <label>
+                      <input name="question6" type="radio" id="hopNo" value="hopNo" />
+                      <span>No</span>
+                    </label>
+                  </p>
+                </div>
+              </div>
+              <div style="text-align: right">
+                <button id = "submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2018 BeerHopper
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/form.js"></script>
+
+</body>
+
+</html>

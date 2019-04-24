@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Events | BeerHopper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Materialize CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper black">
+        <div class="container">
+          <a id = "" href="/users/:username" title="Profile" class="brand-logo">BEERHOPPER</a>
+          <a href="#" data-target="mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="/events" title="Events">
+                <i class="material-icons left">event</i>Events</a>
+            </li>
+            <li>
+              <a href="/map" title="Map">
+                <i class="material-icons left">map</i>Map</a>
+            </li>
+            <li>
+              <a href="/signin" title="Sign Out">
+                <i class="material-icons left">exit_to_app</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile">
+      <li>
+        <a href="/users/:username" title="Profile">
+          <i class="material-icons left">account_circle</i>Profile</a>
+      </li>
+      <li>
+        <a href="/events" title="Events">
+          <i class="material-icons left">event</i>Events</a>
+      </li>
+      <li>
+        <a href="/map" title="Map">
+          <i class="material-icons left">map</i>Map</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="/signin">
+          <i class="material-icons">exit_to_app</i>Sign Out</a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col l12">
+          <div class="carousel carousel-slider center hide-on-med-and-down">
+            <div class="carousel-fixed-item center">
+              <a class="btn waves-effect white grey-text darken-text-2">Add to My Events</a>
+            </div>
+            <a href="https://www.visitraleigh.com/foodie/drinks/raleigh-beer-trail/" target="_blank">
+              <div class="carousel-item">
+                <img src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_330,q_80,w_550/v1/clients/raleigh/Raleigh_Beer_Trail_Passport1_e8944b23-1720-4ea2-b105-62c166886ed0.jpg">
+              </div>
+            </a>
+            <a href="http://www.beerandbourbon.com/cary/show-info" target="_blank">
+              <div class="carousel-item">
+                <img src="https://i1.wp.com/maryland.ourcommunitynow.com/wp-content/uploads/2018/03/beer-bourbon-bbq-Groupon-e1520902608275.jpg?fit=650%2C390&ssl=1">
+              </div>
+            </a>
+            <a href="http://www.downtownraleighfoodtruckrodeo.com/" target="_blank">
+              <div class="carousel-item">
+                <img src="http://www.rentcafe.com/dmslivecafe/UploadedImages/a5dd2579-9b05-406d-90fc-faec2a43bb9d.jpg">
+              </div>
+            </a>
+            <a href="http://www.theraleighbeergarden.com/events" target="_blank">
+              <div class="carousel-item">
+                <img src="http://www.americancraftbeer.com/wp-content/uploads/2017/07/Raleigh-Beer-Garden.jpg">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="col s12">
+          <div class="card white hoverable">
+            <div class="card-content black-text">
+              <span class="card-title center">My Events</span>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Event Name</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Invite Friends</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mother's Day</td>
+                    <td>Raleigh Beer Garden</td>
+                    <td>May 13 2018</td>
+                    <td>
+                      <a class="modal-trigger" id="icon-click" href="#modal1">
+                        <i class="material-icons">textsms</i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Raleigh Food Truck Rodeo</td>
+                    <td>Downtown Raleigh</td>
+                    <td>June 10 2018</td>
+                    <td>
+                      <a class="modal-trigger" id="icon-click" href="#modal1">
+                        <i class="material-icons">textsms</i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Raleigh Beer, Bourbon & BBQ Festival</td>
+                    <td>Koka Booth Amphitheatre</td>
+                    <td>July 27 2018</td>
+                    <td>
+                      <a class="modal-trigger" id="icon-click" href="#modal1">
+                        <i class="material-icons">textsms</i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neuse River Brew Down - Strong(wo)man Event!</td>
+                    <td>Neuse River Brewing Company</td>
+                    <td>September 1 2018</td>
+                    <td>
+                      <a class="modal-trigger" id="icon-click" href="#modal1">
+                        <i class="material-icons">textsms</i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+      <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Invite Friends!</h4>
+        <p>Add phone numbers to text your friends an invite to this event.</p>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="icon_telephone" type="tel" class="validate" placeholder="+19191234567">
+                <label for="icon_telephone">Telephone</label>
+                <span id="icon-click2">
+                  <i class="material-icons suffix">add_circle</i>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn" id="tnSubmit">Submit</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2018 BeerHopper
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/events.js"></script>
+
+</body>
+
+</html>
